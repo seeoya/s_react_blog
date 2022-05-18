@@ -23,7 +23,7 @@ function App() {
 
     // title[0] 과 같이 사용 가능 (array 넣었으니까)
     let [title, setTitle] = useState(["여자 코트 추천", "강남 우동 맛집", "파이썬 독학"]);
-    let [good, setGood] = useState(0);
+    let [good, setGood] = useState([0, 2, 3]);
     let [modal, setModal] = useState(false);
 
     return (
@@ -64,7 +64,7 @@ function App() {
                 정렬
             </button>
 
-            <div className="list">
+            {/* <div className="list">
                 <h4>
                     {title[0]} <span>👍</span>
                     {good}
@@ -87,7 +87,31 @@ function App() {
             <div className="list">
                 <h4 onClick={() => setModal(!modal)}>{title[2]}</h4>
                 <p>2월 17일 발행</p>
-            </div>
+            </div> */}
+
+            {/* 반복문 map 이용, a는 해당 내용, i는 인덱스 */}
+            {title.map(function (a, i) {
+                return (
+                    // 유니크 키가 들어가야함. key={html마다 다른 숫자}
+                    <div className="list" key={i}>
+                        <h4>
+                            {i} : {title[i]}
+                            <span>👍</span> {good[i]}
+                        </h4>
+                        <button
+                            type="button"
+                            onClick={() => {
+                                let copy = [...good];
+                                copy[i]++;
+                                setGood(copy);
+                            }}
+                        >
+                            굿 추가
+                        </button>
+                        <p>2월 17일 발행</p>
+                    </div>
+                );
+            })}
 
             {/* 데이터 바인딩 */}
             {/* <div className={classRed}>여기 변수는 {post}</div> */}
