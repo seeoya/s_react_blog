@@ -215,7 +215,7 @@ function App() {
 
         tList.splice(num, 1);
         gList.splice(num, 1);
-        js;
+
         setTitle(tList);
         setGood(gList);
     }
