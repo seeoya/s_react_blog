@@ -287,7 +287,7 @@ class Profile extends React.Component {
                 {this.state.name == "Lee" ? <div>Lee입니다</div> : <div>Lee가 아닙니다</div>}
                 {this.state.name == "Park" ? <div>Park입니다</div> : <div>Park가 아닙니다</div>}
 
-                <img src="/img/spring.jpg" style={{width: "300px"}} />
+                <img src="./img/spring.jpg" style={{width: "300px"}} />
             </>
         );
     }
