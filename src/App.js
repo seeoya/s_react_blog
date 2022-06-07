@@ -286,6 +286,8 @@ class Profile extends React.Component {
 
                 {this.state.name == "Lee" ? <div>Lee입니다</div> : <div>Lee가 아닙니다</div>}
                 {this.state.name == "Park" ? <div>Park입니다</div> : <div>Park가 아닙니다</div>}
+
+                <img src="/img/spring.jpg" style={{width: "300px"}} />
             </>
         );
     }
@@ -306,3 +308,5 @@ export default App;
 // package.json 파일 object에 아래와 같이 추가
 // "homepage" : "어쩌고저쩌고/blog"
 
+// build할 때 압축시키고 싶지 않은 파일은 public 폴더 안에 넣기 
+// build 한 후에도 루트 경로에 파일이 남아있음. (이 경우 src에 ./가 아니라 /로 import해오면 됨)
