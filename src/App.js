@@ -287,7 +287,13 @@ class Profile extends React.Component {
                 {this.state.name == "Lee" ? <div>Lee입니다</div> : <div>Lee가 아닙니다</div>}
                 {this.state.name == "Park" ? <div>Park입니다</div> : <div>Park가 아닙니다</div>}
 
+
+                {/* homepage 설정 시, 이미지 경로 참고 */}
+                {/* 이미지 위치는 public(/img) */}
+                {/* /가 아니라 ./로 경로 잡아줄 것 */}
                 <img src="./img/spring.jpg" style={{width: "300px"}} />
+                <img src="./birthday.jpg" style={{width: "300px"}} />
+                {/* src 폴더에 이미지가 있는 경우 */}
                 <img src="./birthday.jpg" style={{width: "300px"}} />
             </>
         );
