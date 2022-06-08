@@ -3,6 +3,7 @@
 
 import React, { useState } from "react";
 import "./App.css";
+import ttImg from "./tt.png";
 
 // react (웹 앱 프레임워크)
 // 장) 앱 발행이 쉬움
@@ -294,7 +295,10 @@ class Profile extends React.Component {
                 <img src="./img/spring.jpg" style={{width: "300px"}} />
                 <img src="./birthday.jpg" style={{width: "300px"}} />
                 {/* src 폴더에 이미지가 있는 경우 */}
-                <img src="./birthday.jpg" style={{width: "300px"}} />
+                {/* 상대주소로는 가져올 수 없음 */}
+                {/* import ttImg from "./tt.png"; */}
+                {/* 과 같이 import한 후 src에 해당 변수 추가 */}
+                <img src={ttImg} style={{width: "300px"}} />
             </>
         );
     }
